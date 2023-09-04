@@ -9,9 +9,6 @@ window.onload = function (evt) {
   heading.textContent = 'Here we are NOW!!!'
 
   window.addEventListener('copy', () => {
-    navigator.clipboard.readText()
-    .then(text => {
-      heading.textContent += text
-    })
   })
+})
 }

@@ -11,7 +11,8 @@ window.onload = function (evt) {
   window.addEventListener('copy', () => {
     navigator.clipboard.readText()
     .then(text => {
-      heading.textContent += text
+      console.log(text)
     })
   })
+
 }
