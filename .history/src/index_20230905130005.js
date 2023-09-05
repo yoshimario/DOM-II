@@ -24,5 +24,5 @@ window.onload = function (evt) {
   // dblclick
   document.body.addEventListener('dblclick', evt => {
     evt.target.outerHTML = ''
-  })
+  }
 }

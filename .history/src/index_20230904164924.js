@@ -8,21 +8,11 @@ window.onload = function (evt) {
   const heading = document.querySelector('h1')
   heading.textContent = 'Here we are NOW!!!'
 
-  // 2- Copy
+  // 2-
   window.addEventListener('copy', () => {
     navigator.clipboard.readText()
     .then(text => {
       heading.textContent += text
     })
-  })
-
-  // 3-Click
-  document.body.addEventListener('click', evt => {
-  evt.target.classList.toggle('mirror')
-  })
-
-  // dblclick
-  document.body.addEventListener('dblclick', evt => {
-    evt.target.outerHTML = ''
   })
 }

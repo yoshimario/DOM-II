@@ -20,9 +20,4 @@ window.onload = function (evt) {
   document.body.addEventListener('click', evt => {
   evt.target.classList.toggle('mirror')
   })
-
-  // dblclick
-  document.body.addEventListener('dblclick', evt => {
-    evt.target.outerHTML = ''
-  })
 }
