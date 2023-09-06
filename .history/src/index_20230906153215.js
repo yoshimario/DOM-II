@@ -47,11 +47,9 @@ window.onload = function (evt) {
       destination.style.fontWeight = 'bold'
     })
     destination.addEventListener('mouseleave', () => {
-      setTimeout(() => {
+      setTimeout(() =>{
         destination.style.fontWeight = 'initial'
       }, 500)
     })
   }
-
-  
 }

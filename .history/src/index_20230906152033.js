@@ -40,18 +40,11 @@ window.onload = function (evt) {
   })
 
   // 7-mouseenter
+
   // 8-mouseleave
   const destinations = document.querySelectorAll('.destination')
-  for (let destination of destinations) {
-    destination.addEventListener('mouseenter', () => {
-      destination.style.fontWeight = 'bold'
+  for (destination of destinations) {
+    destination.addEventListener('mouseenter', evt => {
     })
-    destination.addEventListener('mouseleave', () => {
-      setTimeout(() => {
-        destination.style.fontWeight = 'initial'
-      }, 500)
-    })
-  }
 
-  
 }
