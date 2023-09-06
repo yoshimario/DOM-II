@@ -25,17 +25,4 @@ window.onload = function (evt) {
   document.body.addEventListener('dblclick', evt => {
     evt.target.innerHTML = ''
   })
-
-  // 5-keydown
-  window.addEventListener('keydown', evt => {
-    if (evt.key == 6) {
-      document.body.innerHTML = '<h1>Your in trouble for pushing 6 key</h1>'
-    }
-  })
-
-  // 6- mousemove
-  document.body.addEventListener('mousemove', evt => {
-    const{clientX, clientY} = evt
-    // console.log(`Mouse is at ${clientX}, ${clientY}`)
-  })
 }
