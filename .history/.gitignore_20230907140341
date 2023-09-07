@@ -236,5 +236,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Ignore history folder
-history/
+.his
