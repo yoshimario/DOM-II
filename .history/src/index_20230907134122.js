@@ -62,15 +62,7 @@ window.onload = function (evt) {
     });
   });
   // 10-resize
-  window.addEventListener("resize", () => {
-    // Get the body element
-    const body = document.body;
+  addEventListener("resize", (event) => {});
 
-    // Toggle the inline style for background color
-    if (body.style.backgroundColor === "orange") {
-      body.style.backgroundColor = "white";
-    } else {
-      body.style.backgroundColor = "orange";
-    }
-  });
+  onresize = (event) => {};
 };

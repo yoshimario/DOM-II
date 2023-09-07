@@ -7,7 +7,7 @@ window.onload = function (evt) {
   console.log(`event ${evt.type} Launched! Time to go`);
   const heading = document.querySelector("h1");
   heading.textContent = "Here we are NOW!!!";
-
+  
   // 2- Copy
   window.addEventListener("copy", () => {
     navigator.clipboard.readText().then((text) => {
@@ -15,31 +15,31 @@ window.onload = function (evt) {
     });
   });
 
-  // 3- Click
+  // 3-Click
   document.body.addEventListener("click", (evt) => {
     evt.target.classList.toggle("mirror");
   });
 
-  // 4- dblclick
+  //4-dblclick
   document.body.addEventListener("dblclick", (evt) => {
     evt.target.innerHTML = "";
   });
 
-  // 5- keydown
+  // 5-keydown
   window.addEventListener("keydown", (evt) => {
     if (evt.key == 6) {
       document.body.innerHTML = "<h1>Your in trouble for pushing 6 key</h1>";
     }
   });
 
-  // 6- mousemove
+  // 6-mousemove
   document.body.addEventListener("mousemove", (evt) => {
     const { clientX, clientY } = evt;
     // console.log(`Mouse is at ${clientX}, ${clientY}`)
   });
 
-  // 7- mouseenter
-  // 8- mouseleave
+  // 7-mouseenter
+  // 8-mouseleave
   const destinations = document.querySelectorAll(".destination");
   for (let destination of destinations) {
     destination.addEventListener("mouseenter", () => {
@@ -53,24 +53,12 @@ window.onload = function (evt) {
   }
 
   // 9- focus
-  // 9- click on elements with class "text-content"
-  const textContents = document.querySelectorAll(".text-content");
-  textContents.forEach((textContent) => {
-    textContent.addEventListener("click", () => {
-      textContent.style.fontWeight = "underline";
-      textContent.style.color = "orange";
-    });
-  });
-  // 10-resize
-  window.addEventListener("resize", () => {
-    // Get the body element
-    const body = document.body;
+  const imgContents = document.querySelectorAll(".img-content");
 
-    // Toggle the inline style for background color
-    if (body.style.backgroundColor === "orange") {
-      body.style.backgroundColor = "white";
-    } else {
-      body.style.backgroundColor = "orange";
-    }
+  imgContents.forEach((imgContent) => {
+    imgContent.addEventListener("focus", () => {
+      console.log("img-content element focused!");
+      // Add your custom logic here when an img-content element is focused.
+    });
   });
 };

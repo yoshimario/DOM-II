@@ -62,15 +62,11 @@ window.onload = function (evt) {
     });
   });
   // 10-resize
-  window.addEventListener("resize", () => {
-    // Get the body element
-    const body = document.body;
+  const footer = document.querySelector(".footer");
 
-    // Toggle the inline style for background color
-    if (body.style.backgroundColor === "orange") {
-      body.style.backgroundColor = "white";
-    } else {
-      body.style.backgroundColor = "orange";
-    }
+  const footer = document.querySelector(".footer");
+
+  footer.addEventListener("click", () => {
+    console.log("Footer clicked!"); // Log a message when the footer is clicked
   });
 };

@@ -8,7 +8,7 @@ window.onload = function (evt) {
   const heading = document.querySelector("h1");
   heading.textContent = "Here we are NOW!!!";
 
-  // 2- Copy
+// 2- Copy
   window.addEventListener("copy", () => {
     navigator.clipboard.readText().then((text) => {
       heading.textContent += text;
@@ -53,24 +53,12 @@ window.onload = function (evt) {
   }
 
   // 9- focus
-  // 9- click on elements with class "text-content"
-  const textContents = document.querySelectorAll(".text-content");
-  textContents.forEach((textContent) => {
-    textContent.addEventListener("click", () => {
-      textContent.style.fontWeight = "underline";
-      textContent.style.color = "orange";
-    });
-  });
-  // 10-resize
-  window.addEventListener("resize", () => {
-    // Get the body element
-    const body = document.body;
+  const imgContents = document.querySelectorAll(".img-content");
 
-    // Toggle the inline style for background color
-    if (body.style.backgroundColor === "orange") {
-      body.style.backgroundColor = "white";
-    } else {
-      body.style.backgroundColor = "orange";
-    }
+  imgContents.forEach((imgContent) => {
+    imgContent.addEventListener("focus", () => {
+      console.log("img-content element focused!");
+      // Add your custom logic here when an img-content element is focused.
+    });
   });
 };

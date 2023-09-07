@@ -62,15 +62,28 @@ window.onload = function (evt) {
     });
   });
   // 10-resize
-  window.addEventListener("resize", () => {
-    // Get the body element
-    const body = document.body;
-
-    // Toggle the inline style for background color
-    if (body.style.backgroundColor === "orange") {
-      body.style.backgroundColor = "white";
-    } else {
-      body.style.backgroundColor = "orange";
-    }
-  });
+  function handleElementResize() {
+    console.log("Element resized!"); // Log a message when the element is resized
+  }
+  
+  const targetElement = document.querySelector(".your-element-selector");
+  
+  // Create a MutationObserver to watch for changes in clientWidth
+  const observer = new MutationObserver(handleElementResize);
+  
+  // Configure the observer to observe changes in the clientWidth attribute
+  const config = {
+    attributes: true,
+    attributeFilter: ["style"]
+  };
+  
+  // Start observing the element for changes
+  observer.observe(targetElement, config);
+  In this example, we create a MutationObserver to watch for changes in the style attribute of the target element (.your-element-selector). When the style attribute changes, it might indicate that the element's size has changed, and the handleElementResize function is called. You can adjust this code according to your specific requirements and the elements you want to monitor for size changes.
+  
+  
+  
+  
+  
+  
 };

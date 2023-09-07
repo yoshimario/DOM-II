@@ -55,22 +55,11 @@ window.onload = function (evt) {
   // 9- focus
   // 9- click on elements with class "text-content"
   const textContents = document.querySelectorAll(".text-content");
+
   textContents.forEach((textContent) => {
     textContent.addEventListener("click", () => {
       textContent.style.fontWeight = "underline";
       textContent.style.color = "orange";
     });
-  });
-  // 10-resize
-  window.addEventListener("resize", () => {
-    // Get the body element
-    const body = document.body;
-
-    // Toggle the inline style for background color
-    if (body.style.backgroundColor === "orange") {
-      body.style.backgroundColor = "white";
-    } else {
-      body.style.backgroundColor = "orange";
-    }
   });
 };
