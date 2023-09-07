@@ -73,4 +73,25 @@ window.onload = function (evt) {
       body.style.backgroundColor = "orange";
     }
   });
+
+  // 11-mouseover 
+  const header = document.querySelector(".main-navigation");
+
+    header.addEventListener("mouseover", () => {
+      console.log("Header mouseover event triggered");
+      header.style.backgroundColor = "lightblue";
+    });
+    
+    // 12-wheel
+    document.body.addEventListener("wheel", (event) => {
+      // Handle the "wheel" event here
+      const deltaY = event.deltaY; // Get the vertical scroll direction (positive or negative)
+      
+      // Example: Log the scroll direction to the console
+      if (deltaY > 0) {
+        console.log("Scrolled down");
+      } else if (deltaY < 0) {
+        console.log("Scrolled up");
+      }
+    });
 };

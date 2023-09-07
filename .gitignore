@@ -237,4 +237,4 @@ dist
 .pnp.*
 
 # Ignore history folder
-history/
+.history/
