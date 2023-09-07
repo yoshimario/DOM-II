@@ -74,24 +74,46 @@ window.onload = function (evt) {
     }
   });
 
-  // 11-mouseover 
+  // 11-mouseover
   const header = document.querySelector(".main-navigation");
 
-    header.addEventListener("mouseover", () => {
-      console.log("Header mouseover event triggered");
-      header.style.backgroundColor = "lightblue";
-    });
-    
-    // 12-wheel
-    document.body.addEventListener("wheel", (event) => {
-      // Handle the "wheel" event here
-      const deltaY = event.deltaY; // Get the vertical scroll direction (positive or negative)
-      
-      // Example: Log the scroll direction to the console
-      if (deltaY > 0) {
-        console.log("Scrolled down");
-      } else if (deltaY < 0) {
-        console.log("Scrolled up");
-      }
-    });
+  header.addEventListener("mouseover", () => {
+    console.log("Header mouseover event triggered");
+    header.style.backgroundColor = "lightblue";
+  });
+
+  // 12-wheel
+  document.body.addEventListener("wheel", (event) => {
+    // Handle the "wheel" event here
+    const deltaY = event.deltaY; // Get the vertical scroll direction (positive or negative)
+
+    // Example: Log the scroll direction to the console
+    if (deltaY > 0) {
+      // console.log("Scrolled down");
+    } else if (deltaY < 0) {
+      // console.log("Scrolled up");
+    }
+  });
+
+  // 13-scroll
+  window.addEventListener("scroll", () => {
+    // Handle the "scroll" event here
+    // const scrollY = window.scrollY; // Get the vertical scroll position
+    // Example: Log the scroll position to the console
+    // console.log("Vertical scroll position:", scrollY);
+  });
+
+  //14-select
+  const destinationsSelect = document.querySelectorAll(".destination");
+
+  // Function to handle the "select" event
+  function handleSelectEvent(event) {
+    const selectedDestination = event.target.textContent;
+    alert(`Selected destination: ${selectedDestination}`);
+  }
+
+  // Attach the event listener to each "destination" element
+  destinationsSelect.forEach((destination) => {
+    destination.addEventListener("click", handleSelectEvent);
+  });
 };

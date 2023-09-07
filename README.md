@@ -32,12 +32,12 @@ Do not **move or rename any files** in this project. The website's source files 
   * [X] `mouseenter`
   * [X] `mouseleave`
   * [X] `keydown`
-  * [ ] `wheel`
+  * [X] `wheel`
   * [X] `load`
   * [X] `focus`
   * [X] `resize`
-  * [ ] `scroll`
-  * [ ] `select`
+  * [X] `scroll`
+  * [X] `select`
   * [X] `dblclick`
   * [ ] `drag / drop`
   * [X] `copy`
